@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 화면의 크기에 따라 웹페이지가 조정되게 만드는 코드입니다 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 일단 프로젝트 이름은 정해지지 않았기에 임시로 설정했습니다 -->
+  <title>배은정 교수님</title>
+  
+  <!-- Bootstrap을 적용 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- 커스텀 CSS 파일 연결 -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* 마우스를 올렸을 때 텍스트 색상 변경 및 애니메이션 효과 */
+    .nav-item:hover {
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 네비게이션 바를 설정하는 코드입니다. 위에 배치되도록 코딩 해놓았습니다 -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">배은정 교수님</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" class="nav-item" id="about">교수님에 관해</a></li>
+          <li><a href="page1.html" class="nav-item" id="early-20s">20대 초반</a></li>
+          <li><a href="page2.html" class="nav-item" id="mid-20s">20대 중반</a></li>
+          <li><a href="page3.html" class="nav-item" id="late-20s">20대 후반</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="starter-template">
+      <h1>배은정 교수님에 관하여</h1>
+      <p class="lead">배은정 교수님</p>
+      <img src="https://paiza-webapp.s3.amazonaws.com/files/learning/photo_cat_1024.jpg" class="img-responsive center-block" alt="cat image">
+      <p>교수님 소개</p>
+
+      <h2 id="list">목차</h2>
+      <ul class="list-group">
+        <li class="list-group-item">1</li>
+        <li class="list-group-item">2</li>
+        <li class="list-group-item">3</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- jQuery를 사용해 자바스크립트 이용 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    // 마우스를 올렸을 때 텍스트를 일본어로 변경하는 코드
+    document.getElementById("about").addEventListener("mouseover", function() {
+      this.textContent = "教授について"; // '교수님에 관해'를 일본어로 변경
+    });
+
+    document.getElementById("about").addEventListener("mouseout", function() {
+      this.textContent = "교수님에 관해"; // 다시 한국어로 복구
+    });
+
+    document.getElementById("early-20s").addEventListener("mouseover", function() {
+      this.textContent = "20代前半"; // '20대 초반'을 일본어로 변경
+    });
+
+    document.getElementById("early-20s").addEventListener("mouseout", function() {
+      this.textContent = "20대 초반"; // 다시 한국어로 복구
+    });
+
+    document.getElementById("mid-20s").addEventListener("mouseover", function() {
+      this.textContent = "20代中盤"; // '20대 중반'을 일본어로 변경
+    });
+
+    document.getElementById("mid-20s").addEventListener("mouseout", function() {
+      this.textContent = "20대 중반"; // 다시 한국어로 복구
+    });
+
+    document.getElementById("late-20s").addEventListener("mouseover", function() {
+      this.textContent = "20代後半"; // '20대 후반'을 일본어로 변경
+    });
+
+    document.getElementById("late-20s").addEventListener("mouseout", function() {
+      this.textContent = "20대 후반"; // 다시 한국어로 복구
+    });
+  </script>
+</body>
+</html>
